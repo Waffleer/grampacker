@@ -24,44 +24,9 @@ You probably want to configure git to ignore linting changes:
 git config blame.ignoreRevsFile .git-blame-ignore-revs`
 ```
 
-## Building Docker
+## Docker for now
 
-- docker build -t grampacker:0.0.1 .
-- docker-compose up -d
-
-#### Docker Compose
-
-```
----
-version: '3.9'
-services:
-  mongodb:
-    image: mongo:5-focal
-    container_name: mongodb_grampacker
-    expose:
-      - "27017"
-    volumes:
-      - ./docker/data:/data/mongodb
-    logging:
-      driver: "json-file"
-      options:
-          max-size: "5m"
-          max-file: "10"
-    restart: unless-stopped
-
-  grampacker:
-    image: grampacker:latest
-    container_name: grampacker
-    expose:
-      - "8080"
-      - "3000"
-    ports:
-      - 8080:8080
-      - 3000:3000
-    restart: unless-stopped
-    volumes: 
-      - local.json:/var/www/grampacker/config/local.json # maps local `local.json` to `config/local.json` in docker container
-```
+https://hub.docker.com/r/waffledog1000/grampacker-test-upload
 
 ## Priorities
 

@@ -78,8 +78,8 @@ if (config.get('environment') !== 'production') {
   const compiler = webpack(webpackConfig);
 
   const devServerOptions = {
-    host: "192.168.1.4",
-    port: 8080,
+    host: `${config.get('devIP')}`,
+    port: `${config.get('devServerPort')}`,
     devMiddleware: {
       stats: {
         cached: false,
