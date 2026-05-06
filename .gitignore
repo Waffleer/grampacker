@@ -2,8 +2,11 @@ extIds.txt
 node_modules
 .DS_Store
 /config/local.json
+local.json
 /public/dist/*
 app.sublime-project
 app.sublime-workspace
 *.code-workspace
 /.vs
+docker/data/*
+compose.yml
