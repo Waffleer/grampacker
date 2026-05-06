@@ -33,8 +33,7 @@ jobs:
       - name: Build and push Docker image
         uses: docker/build-push-action@v5
         with:
-          context: ./docker
-          file: ./docker/Dockerfile
+          file: Dockerfile
           push: true
           tags: |
             waffledog1000/grampacker-test-upload:${{ env.VERSION }}
