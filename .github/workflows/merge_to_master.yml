@@ -36,9 +36,9 @@ jobs:
           context: ./docker
           file: ./docker/Dockerfile
           push: true
-        tags: |
-          waffledog1000/grampacker-test-upload:$${{ env.VERSION }}
-          waffledog1000/grampacker-test-upload:latest
+          tags: |
+            waffledog1000/grampacker-test-upload:$${{ env.VERSION }}
+            waffledog1000/grampacker-test-upload:latest
 
       - name: Update Docker Hub description
         uses: peter-evans/dockerhub-description@v4
