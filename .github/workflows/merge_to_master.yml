@@ -13,12 +13,14 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: See local directory
+        run: ls
+
       - name: Set VERSION variable from `package.json`
         run: |
           version=`npm pkg get version`
           version="${version//\"/}"
           echo "VERSION=$version" >> $GITHUB_ENV
-        working-directory: /home/runner/work/grampacker/
 
       - name: Build pixelpainter Docker Image
         run: docker buildx build -f Dockerfile . -t grampacker:v${{ env.VERSION }} -t grampacker:latest
