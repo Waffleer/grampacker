@@ -43,20 +43,9 @@ services:
 ```
 {
     "environment"   : "development",
-    "deployUrl": "http://localhost:3000",
-    "publicUrl": "http://localhost:3000",
-    "port": 3000,
-    "devServerPort" : 8080,
-    "bindings"      : [""],
-    "databaseUrl": "mongodb://mongodb_grampacker:27017/grampacker",
-    "imgurClientID": "",
-    "mail": {
-      "host": "mailhost.com",
-      "post": 25,
-      "username": "user",
-      "password": "password",
-      "fromAddress": "Site admin <noreply@yourdomain.com>"
-    },
-    "moderators": []
+    "deployUrl": "http://0.0.0.0:3000",
+    "publicUrl": "http://0.0.0.0:3000",
+    "devIP": "0.0.0.0",
+    "databaseUrl": "mongodb://mongodb_grampacker:27017/grampacker"
 }
 ```
